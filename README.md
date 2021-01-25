@@ -24,7 +24,7 @@ Using PySpark, we will look at the percentages of Amazon Vine vs non-Vine review
 In addition to looking at the full dataset, a subset of what are considered 'helpful' reviews is also examined to highlight potential bias.  This subset contains reviews with 20 or more total votes and 50% or more of the total votes.  
 
 
-## Results:
+## Results
 
 <mark style="background-color: Yellow">**Vine review vs non-Vine review breakdown**:</mark>   
 When looking at the **entire Furniture product review file**, we see very few are Amazon Vine reviews:   
@@ -53,11 +53,11 @@ Of all the Vine reviews, we still see a similar breakdown, in fact, there are mo
 
 
 <mark style="background-color: Yellow">**Percentage of Non-Vine Reviews are 5-star:**</mark>  
-The basic trend continues with the non-Vine reviews; there is a higher percentage of 5-star non-Vine reviews than 5-star Vine reviews.
+The basic trend continues with the non-Vine reviews; there is a higher percentage of 5-star non-Vine reviews than 5-star Vine reviews.  
 ![d1](./images/5star_nonvine.png)
 
 
-## Summary:
+## Summary
 
 These results demonstrate:
 
@@ -67,7 +67,7 @@ These results demonstrate:
 
 Therefore, **there does NOT appear to be bias toward favorable reviews from Vine members** for this product sector.
 
-###Recommendations
+### Recommendations
 Two recommendations for next steps:
 
 1. This exercise determines favorable bias based on the 5-star rating; however, a favorable review could be considered **4- or 5-star**.  In which case, these comparisons could be re-run including both ratings to see if a bias emerges.  
@@ -76,7 +76,7 @@ Two recommendations for next steps:
 
 Pulling only reviews for Vine participating Product IDs and joining that with the full dataset (on Product ID) will create a table with all reviews (Vine and non-Vine) that involve a Vine participating product.
 
-The resulting dataset includes only 10,689 reviews; and **approximately 1/4 are Vine Reviews**, *much higher than the less than 1% when involviong the entire dataset!* 
+The resulting dataset includes only 10,689 reviews; and **approximately 1/4 are Vine Reviews**, *much higher than the less than 1% when involviong the entire dataset!*   
 ![next](./images/all_vine_prod.png)  
 
 Of all the reviews for these specific Product IDs, **57% involve 5-star reviews**.  *This is very similiar to the results of the entire dataset (56.5% have 5-star review)*  
@@ -85,7 +85,7 @@ Of all the reviews for these specific Product IDs, **57% involve 5-star reviews*
 Of all the Vine Reviews for these specific Product IDs, **49% involve 5-star reviews**, which of course the same view as the previous 'All Vine Reviews 5-Star'    
 ![next](./images/vine_prod_vine.png)   
 
-Of all the non-Vine Reviews for these specific Product IDs, **60% involve 5-star reviews**. This is of course a much smaller number (4,737) than the previous view involving the original dataset, but the pecentage is similar. 
+Of all the non-Vine Reviews for these specific Product IDs, **60% involve 5-star reviews**. This is of course a much smaller number (4,737) than the previous view involving the original dataset, but the pecentage is similar.  
 ![next](./images/vine_prod_novine.png) 
 
 Effectively the results come to the same conclusion: there is little difference in the occurrance of a 5-star rating from a Vine reviewer than a non-Vine reviewer, which indicates **there is no favorable bias**.
